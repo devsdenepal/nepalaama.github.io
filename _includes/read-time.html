@@ -1,0 +1,7 @@
+<span class="read-time ml-1">
+  {{ include.bracket_start }}
+    {% if include.approx == 'true' %}~{% endif %}
+    {% assign words = include.content | number_of_words %}
+    {% if words < 360 %}1 min{% else %}{{ words | divided_by:180 }} {{ include.unit }}mins{% endif %}
+  {{ include.bracket_end }}
+</span>

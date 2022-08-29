@@ -1,0 +1,39 @@
+---
+layout: default
+title: Blogs
+permalink: /blogs/
+page_name: blogs
+---
+
+<div class="blogs-page page-margin">
+  <h1 class="text-center">Blogs</h1>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        {% for post in site.posts %}
+        <div class="post-area">
+          <h2>
+            <a href="{{ post.url | prepend: site.baseurl }}" class="bold">{{ post.title }}</a>
+          </h2>
+          <p class="post-date">{{ post.date | date_to_long_string }}
+            {% include read-time.html
+                      content=post.content
+                      bracket_start='('
+                      bracket_end=')'
+                      unit='min'
+                      approx='true'
+                      caption='read'
+            %}
+            &nbsp;|&nbsp;
+            <span><i class="fas fa-user mr-2"></i>{{ post.author }}</span>
+          </p>
+          <p>
+            {{ post.content | truncatewords: 50 }}
+          </p>
+          <a href="{{ post.url | prepend: site.baseurl }}" class="blog-btn text-danger font-weight-normal">Read More</a>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,38 @@
+---
+layout: default
+---
+
+<div class="post">
+  <!-- Wrapper Start -->
+  <section id="intro">
+    <div class="container">
+      <div class="row mx-0">
+        <div class="block">
+          <h1>{{ page.title }}</h1>
+          <div class="post-info-wrapper">
+            <p class="italic">By
+              <span class="bold">{{ page.author }}</span> on
+              <span class="bold">{{ page.date | date: "%b %-d, %Y" }}</span>
+              {% include read-time.html
+                          content=content
+                          bracket_start='('
+                          bracket_end=')'
+                          unit='min'
+                          approx='true'
+                          caption='read'
+              %}
+            </p>
+          </div>
+          <hr />
+          {{ content }}
+        </div>
+      </div>
+
+      <div class="row mx-0">
+        <p class="center-text py-3">
+          <a href="{{ site.baseurl }}/blogs">Back to Blogs List</a>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>

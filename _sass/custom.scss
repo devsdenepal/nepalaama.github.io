@@ -1,0 +1,27 @@
+/* Custom SCSS */
+$color-primary: #ddd;
+
+html,
+body {
+  height: 100%;
+}
+body {
+  font-family: "Helvetica", Arial, sans-serif;
+  font-size: 16px;
+}
+.page-margin {
+  margin-top: 100px;
+}
+main {
+  height: 100vh;
+}
+#page-content {
+  flex: 1 0 auto;
+}
+#sticky-footer {
+  flex-shrink: none;
+}
+
+@import "animate.min";
+@import "home";
+@import "responsive";

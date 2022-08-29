@@ -1,0 +1,32 @@
+<div class="col-md-7">
+  <h5 class="blog-card-title font-weight-bold m-0">
+    <a class="post-title no-decoration text-dark" href="{{ post.url | prepend: site.baseurl }}">{{ include.post.title }}</a>
+  </h5>
+  <div class="post-info mt-2">
+    <span><i class="fas fa-calendar-alt"></i>
+      {{ include.post.date | date: "%-d %b, %Y" }}
+    </span>
+    &nbsp;|&nbsp;
+    <small class="text-muted">
+      {% include read-time.html
+                  content=include.post.content
+                  bracket_start='('
+                  bracket_end=')'
+                  approx='true'
+      %}
+    </small>
+    &nbsp;|&nbsp;
+    <span><i class="fas fa-user mr-2"></i>{{ include.post.author }}</span>
+  </div>
+
+  {% unless include.hide_description %}
+    <p class="blog-card-text font-weight-normal mb-2">
+      {% if page.page_name == "Home" %}
+        {{ include.post.content | truncate: 80 }}
+      {% else %}
+        {{ include.post.content | truncate: 180 }}
+      {% endif %}
+      <a href="{{ post.url | prepend: site.baseurl }}" class="blog-btn text-danger font-weight-normal">Read More</a>
+    </p>
+  {% endunless %}
+</div>

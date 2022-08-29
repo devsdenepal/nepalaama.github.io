@@ -1,0 +1,30 @@
+title: Jekyll Play
+email: gorkhatechie@gmail.com
+description: >- # this means to ignore newlines until "baseurl:"
+  The minimal Jekyll base template with I18n support to quickly start with.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+image_base_url: /assets/img
+
+google_analytics: # your google analytics id
+
+future: true # Show blog post of future date
+permalink: /blogs/:year/:month/:day/:title/
+
+# Pagination settings
+pagination:
+  enabled: true
+  per_page: 10
+  sort_field: 'date'
+  sort_reverse: true
+  permalink: '/page/:num/'
+
+sass:
+  style: compressed
+
+# Build settings
+markdown: kramdown
+
+exclude:
+  - .DS_Store
+  - README.md
