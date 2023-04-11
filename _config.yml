@@ -1,12 +1,12 @@
-title: Jekyll Play
-email: gorkhatechie@gmail.com
+title: Nepal Coding Revolution 2080
+email: dhanusirofficial@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  The minimal Jekyll base template with I18n support to quickly start with.
+  An Intellectual revolution to uplift the Coding skills among Nepalese people.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 asset_base_url: /assets
 
-google_analytics: # your google analytics id
+google_analytics: G-BTYYZYYQT1
 
 future: true # Show blog post of future date
 permalink: /blogs/:year/:month/:day/:title/
