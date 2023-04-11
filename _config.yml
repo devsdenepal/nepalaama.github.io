@@ -4,7 +4,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   The minimal Jekyll base template with I18n support to quickly start with.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-image_base_url: /assets/img
+asset_base_url: /assets
 
 google_analytics: # your google analytics id
 
