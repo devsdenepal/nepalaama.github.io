@@ -1,0 +1,27 @@
+---
+layout: default
+title: UGSA - Home
+page_name: Home
+permalink: /home/
+pageination:
+  enabled: true
+---
+
+<div class="about-page py-6">
+  <div class="container">
+    <div class="row pt-4 mb-4">
+      <div class="col-md-12">
+        <h1 class="text-center text-dark font-weight-bold">Welcome to UGSA</h1>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      {% for post in site.posts %}
+        <div class="col-md-6">
+          <div class="row{% unless forloop.last %} mb-6{% endunless %}">
+            {% include home/post-outline.html post=post %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
